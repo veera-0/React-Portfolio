@@ -6,8 +6,8 @@ function ProjectMain(props){
     return(
         <section className="sec">
             <div className="pro">
-                <img src={props.image} alt="image" />
-                <h5><span>Project Title</span>: {props.title}</h5>
+                <img src={props.image} alt="image" loading='lazy'/>
+                <h5><span style={{color:'black'}}>Project Title</span>: {props.title}</h5>
                 <p className="tech">{props.technology}</p>
                 <p className="description">{props.description}</p>
                 <button className="b2"><a href={props.reference}>View code</a></button>           

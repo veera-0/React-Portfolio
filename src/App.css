@@ -235,8 +235,10 @@ main p {
 .pro img {
   width: 100%; /* Ensure the image takes full width of its container */
   height: auto; /* Maintain aspect ratio */
+  display: block;
   padding-top: 1em;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .pro {
