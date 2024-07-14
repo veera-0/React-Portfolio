@@ -1,0 +1,11 @@
+body{
+    background-size:cover;
+    background-repeat:no-repeat; 
+    background: linear-gradient(15deg,#00416A,#E4E5E6);
+}
+
+#root{
+    background-size:cover;
+    background-repeat:no-repeat; 
+    background: linear-gradient(15deg,#00416A,#E4E5E6);
+}

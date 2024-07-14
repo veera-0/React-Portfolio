@@ -1,6 +1,7 @@
 body{
   background-size:cover;
   background-repeat:no-repeat; 
+  margin: 0;
   background: linear-gradient(15deg,#00416A,#E4E5E6);
 }
 
@@ -15,22 +16,25 @@ nav{
   padding:0 30px;
   box-sizing: border-box;
 }
+
 nav,nav div{
   display:flex;
   justify-content:space-between;
   height:75px;
   align-items:center;
 }
+
 nav img{
   width:30px;
   height:30px;
   mix-blend-mode: multiply;
 }
+
 nav div{
   width: 200px;
 }
+
 nav a{
-  /*background-color: blueviolet;*/
   font-size: 1.5rem;
   text-decoration:none;
   color:black;
@@ -45,17 +49,22 @@ h1{
   display:flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 35px;
   padding:30px 100px;
+
 }
+
 #hero img{
   width:500px;
   height:400px;
   mix-blend-mode: multiply; /* Changed the image to blend mode */
 }
+
 p{
   width:300px;
   margin:20px auto;
 }
+
 @media(max-width:950px){
   #hero img{
       width:400px;
@@ -66,6 +75,7 @@ p{
       padding:15px 5px; 
   }
 }
+
 @media(max-width:763px){
   #hero{
       flex-direction:column-reverse;
@@ -114,20 +124,25 @@ p{
 }
 
 footer{
-  position: inherit;
+  position: relative;
   bottom: 0;
   width: 100%;
-  /* Height of the footer*/ 
   height: 100px;
   display:grid;
   place-items:center;
+  padding-bottom: 25px;
 }
-
-
 
 footer img{
   max-width:30px;
   max-height:30px;
+  transform: translateY(-2px);
+  border-radius: 5px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0, 0, 0.1);
+  width: initial;
+  opacity: 0.9;
 }
 
 @media(max-width:270px){
@@ -139,7 +154,7 @@ footer img{
       right: fit-content;
       justify-content: space-between;
       display: inline-block;  
-       box-sizing: border-box;
+      box-sizing: border-box;
   }
 }
 
@@ -150,6 +165,12 @@ footer img{
       justify-content: center;
       display: inline-block;
   }
+
+  footer img{
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0, 0, 0.1);
+  }
+
   footer a{
       padding:10px;
   }
@@ -157,9 +178,12 @@ footer img{
 
 nav a:hover {
   transform: translateY(-2px);
-  color: green;
+  color: #ffffff;
   background-color: #50A3A4;
   border-radius: 5px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0, 0, 0.1);
   width: initial;
   height: 30px;
   opacity: 0.9;
