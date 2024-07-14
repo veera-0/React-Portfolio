@@ -40,6 +40,10 @@ nav a{
   color:black;
 }
 
+ nav a.active{
+  color: crimson; 
+} 
+
 h1{
   font-size:45px;
   font-family: 'Edu VIC WA NT Beginner', cursive;

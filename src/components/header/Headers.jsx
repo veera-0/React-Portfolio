@@ -1,6 +1,6 @@
 import './../../App.css'
 import logo from './../../assets/images/icon.jpg'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {Component} from 'react'
 
 class Headers extends Component{
@@ -16,8 +16,8 @@ class Headers extends Component{
                     <nav>
                     <img src={logo} alt="logo" />
                         <div>
-                            <Link to='/'>Home</Link>
-                            <Link to='/project'>Projects</Link>
+                            <NavLink exact to='/' activeClassName="active">Home</NavLink>
+                            <NavLink exact to='/project' activeClassName="active">Projects</NavLink>
                         </div>
                     </nav>
                 </header>
