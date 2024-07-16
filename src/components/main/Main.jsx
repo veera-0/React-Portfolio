@@ -15,7 +15,7 @@ function Main(){
                     <p>I'm an engineering graduate, enthusiastic in learning new skills, expand my knowledge and leverage my learnings.</p>
                     <a href={Resume} download="Velpuri Anjaneyulu.pdf"><button className="button">Resume</button></a>
                 </div>
-                <img src={work} alt='image' loading='lazy' />
+                <img src={work} alt='image' loading='eager' />
         </section>  
     )
 }
