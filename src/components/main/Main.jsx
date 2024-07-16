@@ -7,11 +7,6 @@ import Resume from './../../assets/resume/VelpuriAnjaneyulu.pdf'
 
 
 function Main(){
-
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-
-    const openModal = () => setModalIsOpen(true);
-    const closeModal = () => setModalIsOpen(false);
     
     return(
         <section id="hero">
