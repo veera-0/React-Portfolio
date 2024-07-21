@@ -8,7 +8,7 @@ function Footer(){
     return(
         <>
             <footer>
-                <h3>Contact Info</h3>
+                <h3>Follow Me</h3>
                 <div>
                     <a href="https://www.linkedin.com/in/anjaneyulu-velpuri/" target="_blank"><img src={linkdin} alt="LinkedIn" /></a>
                     <a href="mailto: velpurianji2002@gmail.com" target="_blank"><img src={mail} alt="Gmail" /></a>

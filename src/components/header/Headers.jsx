@@ -15,9 +15,10 @@ class Headers extends Component{
                 <header>
                     <nav>
                     <img src={logo} alt="logo" />
-                        <div>
+                        <div className='links'>
                             <NavLink exact to='/' activeClassName="active">Home</NavLink>
                             <NavLink exact to='/projects' activeClassName="active">Projects</NavLink>
+                            <NavLink exact to='/about' activeClassName="active">About</NavLink>
                         </div>
                     </nav>
                 </header>
