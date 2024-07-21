@@ -17,12 +17,12 @@ function Headers(){
                 <nav>
                     <img src={logo} alt="logo" />
                     <div>
-                        <button className="menu-button" onClick={toggleMenu}>Menu</button>
                         <div className={`links ${menuOpen ? 'show' : ''}`}>
                             <NavLink exact to='/' activeClassName="active">Home</NavLink>
                             <NavLink exact to='/projects' activeClassName="active">Projects</NavLink>
                             <NavLink exact to='/skills' activeClassName="active">About</NavLink>
                         </div>
+                        <button className="menu-button" onClick={toggleMenu}>Menu</button>
                     </div>
                 </nav>
             </header>
