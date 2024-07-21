@@ -18,6 +18,7 @@
     "react-modal": "^3.16.1",
     "react-model": "^4.3.1",
     "react-pdf": "^9.1.0",
+    "react-pdfobject": "^1.2.0",
     "react-router-dom": "^6.24.0"
   },
   "devDependencies": {

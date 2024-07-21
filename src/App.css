@@ -5,6 +5,8 @@ body{
   background: linear-gradient(15deg,#00416A,#E4E5E6);
 }
 
+.my-pdf { height: 500px; border: 1px solid #ccc; }
+
 #hero{
   font-weight: lighter;
   font-style: italic;

@@ -6,7 +6,6 @@ import './../../App.css'
 import React,{ useState } from 'react'
 import Resume from './../../assets/resume/VelpuriAnjaneyulu.pdf'
 
-
 function Main(){
     
     return(
