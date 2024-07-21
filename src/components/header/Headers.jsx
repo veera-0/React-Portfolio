@@ -18,9 +18,9 @@ function Headers(){
                     <img src={logo} alt="logo" />
                     <div>
                         <div className={`links ${menuOpen ? 'show' : ''}`}>
-                            <NavLink exact to='/' activeClassName="active">Home</NavLink>
-                            <NavLink exact to='/projects' activeClassName="active">Projects</NavLink>
-                            <NavLink exact to='/skills' activeClassName="active">About</NavLink>
+                            <NavLink to='/' activeClassName="active">Home</NavLink>
+                            <NavLink to='/projects' activeClassName="active">Projects</NavLink>
+                            <NavLink to='/skills' activeClassName="active">About</NavLink>
                         </div>
                         <button className="menu-button" onClick={toggleMenu}>Menu</button>
                     </div>
