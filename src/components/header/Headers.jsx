@@ -1,30 +1,33 @@
 import './../../App.css'
 import logo from './../../assets/images/v-logo.jpeg'
 import { NavLink } from "react-router-dom";
-import {Component} from 'react'
+import { useState } from 'react';
 
-class Headers extends Component{
+function Headers(){
 
-    constructor(props){
-        super(props);
-    }
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    render(){
-        return(
-            <>
-                <header>
-                    <nav>
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    return(
+        <>
+            <header>
+                <nav>
                     <img src={logo} alt="logo" />
-                        <div className='links'>
+                    <div>
+                        <button className="menu-button" onClick={toggleMenu}>Menu</button>
+                        <div className={`links ${menuOpen ? 'show' : ''}`}>
                             <NavLink exact to='/' activeClassName="active">Home</NavLink>
                             <NavLink exact to='/projects' activeClassName="active">Projects</NavLink>
-                            <NavLink exact to='/about' activeClassName="active">About</NavLink>
+                            <NavLink exact to='/skills' activeClassName="active">About</NavLink>
                         </div>
-                    </nav>
-                </header>
-            </>
-        )
-    }
+                    </div>
+                </nav>
+            </header>
+        </>
+    )     
 }
 
 export default Headers;

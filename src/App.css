@@ -64,6 +64,44 @@ nav a{
   color: green; 
 } 
 
+/* Adding the menu button in the code */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.menu-button {
+  display: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .links {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+  }
+
+  .menu-button {
+      display: block;
+  }
+
+  .links.show {
+      display: flex;
+  }
+}
+
+/*  */
+
 h1{
   font-size:45px;
   font-family: 'Edu VIC WA NT Beginner', cursive;
