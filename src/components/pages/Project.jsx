@@ -11,14 +11,14 @@ import calculator from './../../assets/images/calc.png'
 function Project(){
 
     useEffect(() => {
-        document.title = 'Veera | Project';
+        document.title = 'Veera | Projects';
     }, []);
 
     return(
         <>
         <Headers />
             <main>
-                <p>Projects</p>
+                <p className='underline'>Projects</p>
                 <hr/>
                 <div className="grid">
                     <ProjectMain image={bends} 

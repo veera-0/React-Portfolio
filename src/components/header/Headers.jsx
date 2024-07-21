@@ -1,5 +1,5 @@
 import './../../App.css'
-import logo from './../../assets/images/icon.jpg'
+import logo from './../../assets/images/v-logo.jpeg'
 import { NavLink } from "react-router-dom";
 import {Component} from 'react'
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import work from './../../assets/images/work.jpeg'
@@ -13,7 +14,10 @@ function Main(){
                 <div>
                     <h1>Hi, I am <br/> Veera Anjaneyulu</h1>
                     <p>I'm an engineering graduate, enthusiastic in learning new skills, expand my knowledge and leverage my learnings.</p>
-                    <a href={Resume} download="Velpuri Anjaneyulu.pdf"><button className="button">Resume</button></a>
+                    <div className="anchors">
+                        <a href={Resume} download="Velpuri Anjaneyulu.pdf"><button className="button">Resume</button></a>
+                        <a href={Resume} view="Velpuri Anjaneyulu.pdf"><button className="button">Preview</button></a>
+                    </div>
                 </div>
                 <img src={work} alt='image' loading='eager' />
         </section>  
