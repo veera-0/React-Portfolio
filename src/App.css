@@ -17,6 +17,7 @@ nav{
   box-sizing: border-box;
 }
 
+/* This was not used, it deals with accomidating the ancors in home */
 .anchors{
   display: flex; 
   justify-content: space-around;
