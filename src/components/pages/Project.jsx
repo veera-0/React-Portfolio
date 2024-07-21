@@ -42,7 +42,7 @@ function Project(){
                     <ProjectMain image={seat} 
                         title="Seat Booking System" 
                         technology="HTML | CSS | PHP | SQL |JS" 
-                        description="This is web application used to book seating. PHP is used for storing & retrieving from SQL."
+                        description="This is a web application used to book seating. PHP is used for storing & retrieving from SQL."
                         reference="https://github.com/veera-0/Springboot-application"/>
                 </div>
             </main>
