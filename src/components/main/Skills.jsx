@@ -47,7 +47,7 @@ function Skills() {
                 </div>
                 <div className="skill-card">
                     <SiCplusplus className="skill-icon" />
-                    <h3>C Programming</h3>
+                    <h3>C++ Programming</h3>
                 </div>
                 <div className="skill-card">
                     <FaJava className="skill-icon" />

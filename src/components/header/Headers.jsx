@@ -20,7 +20,7 @@ function Headers(){
                         <div className={`links ${menuOpen ? 'show' : ''}`}>
                             <NavLink to='/' activeClassName="active">Home</NavLink>
                             <NavLink to='/projects' activeClassName="active">Projects</NavLink>
-                            <NavLink to='/skills' activeClassName="active">About</NavLink>
+                            <NavLink to='/skills' activeClassName="active">Skills</NavLink>
                         </div>
                         <button className="menu-button" onClick={toggleMenu}>Menu</button>
                     </div>
