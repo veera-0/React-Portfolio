@@ -4,9 +4,15 @@
 import work from './../../assets/images/work.jpeg'
 import './../../App.css'
 import React,{ useState } from 'react'
-import Resume from './../../assets/resume/VelpuriAnjaneyulu.pdf'
+import Resume from '../../assets/resume/Velpuri Anjaneyulu.pdf'
 
 function Main(){
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [pdfFile, setPdfFile] = useState(Resume); // Replace with your PDF file path
+
+  const openModal = () => setModalIsOpen(true);
+  const closeModal = () => setModalIsOpen(false);
     
     return(
         <section id="hero">
