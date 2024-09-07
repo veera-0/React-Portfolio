@@ -51,7 +51,7 @@ function Skills() {
                 </div>
                 <div className="skill-card">
                     <FaJava className="skill-icon" />
-                    <h3>C++</h3>
+                    <h3>Java</h3>
                 </div>
             </div>
         </div>
