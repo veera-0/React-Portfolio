@@ -6,6 +6,11 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.about-container.move{
+    transform: translateY(40px);
 }
 
 .about-container h1 {
@@ -58,3 +63,25 @@
     font-size: 1.2em;
     color: #333;
 }
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    padding-bottom: 25px;
+    background-color: linear-gradient(15deg, #00416A, #E4E5E6);; /* Add a background color if needed */
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+footer.move {
+    transform: translateY(15px);
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(15deg, #00416A, #E4E5E6);
+    display: flex;
+    flex-direction: column;
+  }

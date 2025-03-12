@@ -9,6 +9,20 @@ function Headers(){
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+        const aboutContainer = document.querySelector('.about-container');
+        const footer = document.querySelector('footer');
+        const project = document.querySelector('.underline');
+        if(aboutContainer){
+            aboutContainer.classList.toggle('move');
+        }
+
+        if(footer){
+            footer.classList.toggle('move');
+        }
+
+        if(project){
+            project.classList.toggle('prjectmove');
+        }
     };
 
     return(
@@ -18,9 +32,10 @@ function Headers(){
                     <img src={logo} alt="logo" />
                     <div>
                         <div className={`links ${menuOpen ? 'show' : ''}`}>
-                            <NavLink to='/' activeClassName="active">Home</NavLink>
-                            <NavLink to='/projects' activeClassName="active">Projects</NavLink>
-                            <NavLink to='/skills' activeClassName="active">Skills</NavLink>
+                            <NavLink to='/' activeclassname="active">Home</NavLink>
+                            <NavLink to='/projects' activeclassname="active">Projects</NavLink>
+                            <NavLink to='/skills' activeclassname="active">Skills</NavLink>
+                            <NavLink to='/About' activeclassname="active">About</NavLink>
                         </div>
                         <button className="menu-button" onClick={toggleMenu}>Menu</button>
                     </div>
