@@ -22,9 +22,8 @@ const About = () => {
     { year: '2016-2017', title: 'CBSE', description: 'I completed my 10th class at NATCO school of leaning' },
   ];
 
-  const aboutMe = "I am a passionate software developer with a strong background in computer science. I have a keen interest in web development and enjoy creating interactive and dynamic web applications. I am always eager to learn new technologies and improve my skills.";
-
-
+  const aboutMe = "I am a software developer with experience in backend development using Spring Boot and frontend technologies like React.js. I also have knowledge in the field of Artificial Intelligence, allowing me to create versatile and innovative solutions.";
+  
   return (
     <>
       <div className="about-me">
