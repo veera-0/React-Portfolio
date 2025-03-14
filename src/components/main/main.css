@@ -1,0 +1,90 @@
+.resume-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+.resume-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 80vh;
+    overflow-y: auto;
+    gap: 20px;
+    min-height: 500px;
+}
+
+.resume-preview canvas {
+    max-width: 100%;
+    height: auto !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .resume-buttons {
+        flex-direction: column;
+    }
+
+    .resume-buttons .button {
+        width: 100%;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.page-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.page-control-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.page-control-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.page-control-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
