@@ -10,22 +10,7 @@ function Headers(){
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        // const aboutContainer = document.querySelector('.about-container');
-        // const footer = document.querySelector('footer');
-        // const project = document.querySelector('.underline');
-        // if(aboutContainer){
-        //     aboutContainer.classList.toggle('move');
-        // }
-
-        // if(footer){
-        //     footer.classList.toggle('move');
-        // }
-
-        // if(project){
-        //     project.classList.toggle('prjectmove');
-        // }
     };
-
 
     return(
         <>
@@ -38,6 +23,7 @@ function Headers(){
                             <NavLink to='/projects' activeclassname="active">Projects</NavLink>
                             <NavLink to='/skills' activeclassname="active">Skills</NavLink>
                             <NavLink to='/About' activeclassname="active">About</NavLink>
+                            <NavLink to='/Badges' activeclassname="active">Badges</NavLink>
                         </div>
                         <button className="menu-button" onClick={toggleMenu}>Menu</button>
                     </div>
@@ -48,6 +34,7 @@ function Headers(){
                 <NavLink to='/projects' activeclassname="active" onClick={toggleMenu}>Projects</NavLink>
                 <NavLink to='/skills' activeclassname="active" onClick={toggleMenu}>Skills</NavLink>
                 <NavLink to='/About' activeclassname="active" onClick={toggleMenu}>About</NavLink>
+                <NavLink to='/Badges' activeclassname="active" onClick={toggleMenu}>Badges</NavLink>
             </div>
         </>
     )     

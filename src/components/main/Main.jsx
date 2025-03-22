@@ -26,12 +26,14 @@ function Main() {
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#fff',
             padding: '20px',
-            maxWidth: '800px',
-            width: '90%',
-            maxHeight: '90vh',
-            overflow: 'auto',
+            maxWidth: '1000px', // Increased maxWidth
+            width: '95%',
+            height: '90vh', // Set specific height
+            overflow: 'hidden', // Changed to hidden
             borderRadius: '8px',
-            boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+            boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+            display: 'flex',
+            flexDirection: 'column'
         },
         overlay: {
             backgroundColor: 'rgba(0, 0, 0, 0.75)',
@@ -41,9 +43,14 @@ function Main() {
     
     return(
         <section id="hero">
-            <div>
-                <h1>Hi, I am <br/> Veera Anjaneyulu</h1>
-                <p>I'm an engineering graduate, enthusiastic in learning new skills, expand my knowledge and leverage my learnings.</p>
+            <div className='hero-content'>
+                <h1 className='animated-name'>
+                    Hi, I am <br/> 
+                    <span className='name-highlight'>Veera Anjaneyulu </span>
+                </h1>
+                <p className='hero-description'>
+                    I'm a software developer, enthusiastic in learning new skills, expanding my knowledge and leverage my learnings.
+                </p>
                 <div className="resume-buttons">
                     <button className="button" onClick={openModal}>Preview Resume</button>
                     <a href={resumeImage} download="Velpuri Anjaneyulu Resume">
@@ -68,8 +75,9 @@ function Main() {
                         src={resumeImage} 
                         alt="Resume Preview" 
                         style={{
-                            maxWidth: '100%',
-                            height: 'auto',
+                            width: 'auto',
+                            height: 'calc(90vh - 100px)', // Subtract header height
+                            objectFit: 'contain',
                             boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)'
                         }}
                     />
