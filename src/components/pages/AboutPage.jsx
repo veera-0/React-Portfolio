@@ -2,7 +2,7 @@ import Footer from '../footer/Footer'
 import Headers from '../header/Headers'
 import About from '../main/About/About'
 import './../../App.css'
-// import educationData from '../../data/educationData'
+import { useEffect } from "react";
 import styled from 'styled-components'
 
 const AppWrapper = styled.div`
@@ -11,6 +11,11 @@ const AppWrapper = styled.div`
 `;
 
 function AboutPage() {
+
+    useEffect(() => {
+        document.title = 'Veera | About';
+    }, []);
+
     return(
       <> 
         <Headers />

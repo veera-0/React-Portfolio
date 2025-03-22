@@ -19,11 +19,15 @@ const About = () => {
   const educationData = [
     { year: '2019-2023', title: 'Bachelor of Science in Computer Science', description: 'Completed my Bachelor\'s in CSE from KKR&KSR institute of technology & sciences' },
     { year: '2017-2019', title: 'Intermediate', description: 'Completed my intermediate in PCM(Physics,Chemistry,Maths)' },
-    { year: '2016-2017', title: 'CBSE', description: 'I completed my 10th class at NATCO school of leaning' },
+    { year: '2016-2017', title: 'CBSE', description: 'I completed my 10th grade at NATCO School of Learning.' },
   ];
 
-  const aboutMe = "I am a software developer with experience in backend development using Spring Boot and frontend technologies like React.js. I also have knowledge in the field of Artificial Intelligence, allowing me to create versatile and innovative solutions.";
-  
+  const aboutMe = `I am a software developer with extensive experience in backend development 
+    using Spring Boot and frontend technologies like React.js. I specialize in building 
+    scalable and efficient applications, ensuring robust performance and seamless user 
+    experiences. My expertise includes database management, API integration, and deploying 
+    applications across diverse environments.`;
+
   return (
     <>
       <div className="about-me">
