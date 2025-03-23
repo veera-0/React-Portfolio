@@ -1,4 +1,5 @@
 import './../../App.css'
+import '../header/headers.css'
 import logo from './../../assets/images/v-logo.jpeg'
 import { NavLink } from "react-router-dom";
 import { useState } from 'react';
@@ -17,15 +18,24 @@ function Headers(){
                 <nav>
                     <img src={logo} alt="logo" />
                     <div>
-                        <div className={`links ${menuOpen ? 'show' : ''}`}>
-                            <NavLink to='/' activeClassName="active">Home</NavLink>
-                            <NavLink to='/projects' activeClassName="active">Projects</NavLink>
-                            <NavLink to='/skills' activeClassName="active">Skills</NavLink>
+                        <div className="links">
+                            <NavLink to='/' activeclassname="active">Home</NavLink>
+                            <NavLink to='/projects' activeclassname="active">Projects</NavLink>
+                            <NavLink to='/skills' activeclassname="active">Skills</NavLink>
+                            <NavLink to='/About' activeclassname="active">About</NavLink>
+                            <NavLink to='/Badges' activeclassname="active">Badges</NavLink>
                         </div>
                         <button className="menu-button" onClick={toggleMenu}>Menu</button>
                     </div>
                 </nav>
             </header>
+            <div className={`sidebar ${menuOpen ? 'showSidebar' : ''}`}>
+                <NavLink to='/' activeclassname="active" onClick={toggleMenu}>Home</NavLink>
+                <NavLink to='/projects' activeclassname="active" onClick={toggleMenu}>Projects</NavLink>
+                <NavLink to='/skills' activeclassname="active" onClick={toggleMenu}>Skills</NavLink>
+                <NavLink to='/About' activeclassname="active" onClick={toggleMenu}>About</NavLink>
+                <NavLink to='/Badges' activeclassname="active" onClick={toggleMenu}>Badges</NavLink>
+            </div>
         </>
     )     
 }

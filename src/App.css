@@ -1,11 +1,31 @@
-body{
+/* body{
   background-size:cover;
   background-repeat:no-repeat; 
   margin: 0;
   background: linear-gradient(15deg,#00416A,#E4E5E6);
+  box-sizing: border-box;
+} */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.my-pdf { height: 500px; border: 1px solid #ccc; }
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(15deg, #00416A, #E4E5E6);
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
 #hero{
   font-weight: lighter;
@@ -15,7 +35,7 @@ body{
 /* Adding comments at stops */
 
 nav{
-  padding:0 30px;
+  padding:0 100px;
   box-sizing: border-box;
 }
 
@@ -25,6 +45,13 @@ nav{
   align-items: center;
   padding: 10px 20px;
 }
+
+.links a {
+  margin: 0 10px; 
+  text-decoration: none;
+  color: black; 
+}
+
 
 /* This was not used, it deals with accomidating the ancors in home */
 .anchors{
@@ -58,6 +85,11 @@ nav a{
 
 .underline{
   text-decoration: underline;
+  transition: transform 0.3s ease;
+}
+
+.underline.prjectmove{
+  transform: translateY(20px);
 }
 
  nav a.active{
@@ -73,17 +105,6 @@ nav a{
   background-color: #f8f9fa;
 }
 
-.menu-button {
-  display: none;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: auto;
-}
 
 @media (max-width: 768px) {
   .links {
@@ -99,6 +120,11 @@ nav a{
 
   .links.show {
       display: flex;
+      position: relative;
+      z-index: 10;
+      left: 0;
+      right: 1;
+      background-color: inherit;
   }
 }
 
@@ -286,7 +312,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 10px; /* added */
+  padding: 30px; /* added */
 }
 
 main p {
@@ -308,6 +334,7 @@ main p {
   margin: 0 auto; /* Center align the section */
   flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
+
 
 .pro img {
   width: 100%; /* Ensure the image takes full width of its container */

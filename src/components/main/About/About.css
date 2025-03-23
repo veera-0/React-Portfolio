@@ -1,0 +1,51 @@
+
+  .timeline-year {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .timeline-icon {
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.6em;
+    text-align: center;
+    padding-top: 23px;
+  }
+
+  @media (max-width: 664px) {
+    .timeline-item-content {
+      width: 100%;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+
+    .vertical-timeline-element-content > p {
+      width: 100%;
+    }
+  
+    .timeline-icon {
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.5em;
+      text-align: center;
+      padding-top: 15px;
+    }
+  }
+
+  .about-me {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .about-me h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .about-me p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
