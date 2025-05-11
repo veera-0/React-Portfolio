@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import work from './../../assets/images/work.jpeg';
 import resumeImage from './../../assets/resume/resume_pic.png';
+import resume from './../../assets/resume/Velpuri Anjaneyulu.pdf';
 import './../../App.css';
 import '../main/main.css';
 
@@ -53,7 +54,7 @@ function Main() {
                 </p>
                 <div className="resume-buttons">
                     <button className="button" onClick={openModal}>Preview Resume</button>
-                    <a href={resumeImage} download="Velpuri Anjaneyulu Resume">
+                    <a href={resume} download="Velpuri Anjaneyulu Resume">
                         <button className="button">Download Resume</button>
                     </a>
                 </div>
