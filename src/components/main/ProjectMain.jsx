@@ -11,7 +11,9 @@ function ProjectMain(props){
                 <h5><span style={{color:'black'}}>Project Title</span>: {props.title}</h5>
                 <p className="tech">{props.technology}</p>
                 <p className="description">{props.description}</p>
-                <button className="b2"><a href={props.reference}>View code</a></button>           
+                <div className="button-wrapper">
+                   <button className="b2"><a href={props.reference}>View code</a></button>
+                </div>
             </div>
         </section> 
     )

@@ -309,22 +309,31 @@ main p {
 }
 
 .sec {
-  display: flex;
+  /* display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
   height: fit-content;
   padding: 5px;
   box-sizing: border-box;
-  width: 100%; /* Ensure the section takes full width */
-  max-width: 100%; /* Prevent overflow */
-  margin: 0 auto; /* Center align the section */
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  width: 100%; 
+  max-width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap; */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;    /* stretch all children to equal height */
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
 }
 
 
 .pro img {
-  width: 100%; /* Ensure the image takes full width of its container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto; 
   display: block;
   padding-top: 1em;
   object-fit: cover;
@@ -332,21 +341,36 @@ main p {
 }
 
 .pro {
+  /*flex:1 1 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; 
   align-items: center;
-  height: max-content;
+  height: auto;
   border-width: 0;
   background-color: antiquewhite;
   box-shadow: 5px 5px 5px 1px grey;
   padding: 10px;
   box-sizing: border-box;
   width: 100%; 
-  max-width: 350px; /* Prevent too wide on larger screens */
+  max-width: 350px; 
   border-radius: 1em;
-  text-align: center; /* Center align content */
-  margin: 10px; /* Add margin to separate from screen edge */
+  text-align: center;
+  margin: 10px;  Add margin to separate from screen edge */
+
+  flex: 1 1 300px;          /* grow/shrink, min-width 300px */
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* push inner content apart vertically */
+  background-color: antiquewhite;
+  box-shadow: 5px 5px 5px 1px grey;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 1em;
+  text-align: center;
+  box-sizing: border-box;
+  height: auto;
 }
 
 .b2 {
@@ -379,6 +403,12 @@ main p {
 
 .b2:hover {
   background: linear-gradient(to right, purple, violet);
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: auto; /* Push the button to the bottom */
 }
 
 .grid {
