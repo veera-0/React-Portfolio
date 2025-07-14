@@ -21,7 +21,7 @@ export async function getProjects() {
   const { data, error } = await supabase
     .from('projectData')
     .select('*')
-    .order('created_at', { ascending: false });
+    .order('created_at', { ascending: true });
   if (error) throw error;
   return data;
 }
@@ -31,7 +31,7 @@ export async function getEducationData() {
   const { data, error } = await supabase
     .from('educationData')
     .select('*')
-    .order('education_id', { ascending: false });
+    .order('education_id', { ascending: true });
   if (error) throw error;
   return data;
 }
