@@ -9,7 +9,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export async function getProfile(userId) {
   const { data, error } = await supabase
     .from('profileDB')
-    .select('*')
+    .select('Name,about')
     .eq('profile_id', userId)
     .single();
   if (error) throw error;
