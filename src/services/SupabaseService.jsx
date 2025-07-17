@@ -10,7 +10,7 @@ export async function getProfile(userId) {
   const { data, error } = await supabase
     .from('profileDB')
     .select('Name,about')
-    .eq('profile_id', userId)
+    .eq('id', userId)
     .single();
   if (error) throw error;
   return data;
@@ -29,9 +29,9 @@ export async function getProjects() {
 // Fetch education data from 'education' table
 export async function getEducationData() {
   const { data, error } = await supabase
-    .from('educationData')
+    .from('EducationData')
     .select('*')
-    .order('education_id', { ascending: true });
+    .order('education_id', { ascending: false });
   if (error) throw error;
   return data;
 }

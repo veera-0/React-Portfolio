@@ -21,7 +21,9 @@ function Project() {
             } catch (err) {
                 setError('Failed to load projects');
             } finally {
-                setLoading(false);
+                // setTimeout(() => {  
+                    setLoading(false);
+                // }, 5000);
             }
         }
 
@@ -31,7 +33,7 @@ function Project() {
     return (
         <>
             <Headers />
-            <main>
+            <main style={{background: 'linear-gradient(15deg, #00416A, #E4E5E6)'}}>
                 <p className='underline'>Projects</p>
                 <hr />
                 {loading && (
@@ -47,16 +49,17 @@ function Project() {
                                     minWidth: 250,
                                     maxWidth: 350,
                                     width: '100%',
-                                    margin: '0 auto',
+                                    margin: '0 auto 40px auto',
                                     display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center'
+                                    flexDirection: 'column'
+                                    
                                 }}
                             >
-                                <Skeleton variant="rectangular" width="100%" height={140} style={{ marginBottom: 12, borderRadius: 8 }} />
-                                <Skeleton variant="text" width="80%" height={32} />
-                                <Skeleton variant="text" width="60%" height={24} />
-                                <Skeleton variant="text" width="90%" height={20} />
+                                    <Skeleton variant="rectangular" width="100%" height={140} style={{ borderRadius: 8 }} />
+                                    <Skeleton variant="text" width="80%" height={32} />
+                                    <Skeleton variant="text" width="60%" height={24} />
+                                    <Skeleton variant="text" width="90%" height={20} />
+
                             </div>
                         ))}
                     </div>
