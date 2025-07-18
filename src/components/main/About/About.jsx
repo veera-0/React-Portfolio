@@ -17,6 +17,11 @@ const TimelineWrapper = styled.div`
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
+
+  .vertical-timeline::before {
+    background: linear-gradient(to bottom, #293156ff, #4f6dff);
+    width: 4px;
+  }
 `;
 
 const About = () => {
