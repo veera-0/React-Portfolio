@@ -33,8 +33,8 @@ function Project() {
     return (
         <>
             <Headers />
-            <main style={{background: 'linear-gradient(15deg, #00416A, #E4E5E6)'}}>
-                <p className='underline'>Projects</p>
+            <main>
+                <p className='underline' style={{color:'green'}}>Projects</p>
                 <hr />
                 {loading && (
                     <div className="grid">

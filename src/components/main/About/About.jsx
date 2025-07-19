@@ -78,7 +78,7 @@ const About = () => {
       {!loading &&
          <>
            <div className="about-me">
-            <h2>About Me</h2>
+            <h2 style={{color:'green'}}>About Me</h2>
             <p>{profile.about}</p>
           </div>
           <TimelineWrapper>

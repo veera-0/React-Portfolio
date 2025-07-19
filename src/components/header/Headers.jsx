@@ -16,7 +16,7 @@ function Headers(){
         <>
             <header>
                 <nav>
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="v logo" loading='lazy'/>
                     <div>
                         <div className="links">
                             <NavLink to='/' activeclassname="active">Home</NavLink>
@@ -25,7 +25,12 @@ function Headers(){
                             <NavLink to='/About' activeclassname="active">About</NavLink>
                             <NavLink to='/Badges' activeclassname="active">Badges</NavLink>
                         </div>
-                        <button className="menu-button" onClick={toggleMenu}>Menu</button>
+                        <button type="button" 
+                                aria-expanded={menuOpen} 
+                                className="menu-button" 
+                                onClick={toggleMenu}>
+                                    Menu
+                        </button>
                     </div>
                 </nav>
             </header>

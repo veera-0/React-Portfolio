@@ -10,6 +10,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   /* background: linear-gradient(15deg, #00416A, #E4E5E6); */
+  background: #e7d3bb;
+  /* background: #F8F9FA; */
+  /* background: #F5F7FA; */
   display: flex;
   flex-direction: column;
 }
@@ -146,6 +149,7 @@ h1{
 p{
   width:300px;
   margin:20px auto;
+  /* color: #333333; */
 }
 
 @media(max-width:839px){
@@ -341,29 +345,13 @@ main p {
 }
 
 .pro {
-  /*flex:1 1 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; 
-  align-items: center;
-  height: auto;
-  border-width: 0;
-  background-color: antiquewhite;
-  box-shadow: 5px 5px 5px 1px grey;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 100%; 
-  max-width: 350px; 
-  border-radius: 1em;
-  text-align: center;
-  margin: 10px;  Add margin to separate from screen edge */
-
   flex: 1 1 300px;          /* grow/shrink, min-width 300px */
   max-width: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;  /* push inner content apart vertically */
-  background-color: antiquewhite;
+  justify-content: space-between; 
+  /* background-color: antiquewhite; */
+  background-color: #E2E8F0;
   box-shadow: 5px 5px 5px 1px grey;
   padding: 10px;
   margin: 10px;
@@ -374,7 +362,8 @@ main p {
 }
 
 .b2 {
-  background: linear-gradient(to right, violet, purple);
+  /* background: linear-gradient(to right, violet, purple); */
+  background: #0F3460;
   border: none;
   color: rgb(250, 246, 246);
   padding: 15px 32px;
@@ -402,7 +391,7 @@ main p {
 }
 
 .b2:hover {
-  background: linear-gradient(to right, purple, violet);
+  background: #4E342E;
 }
 
 .button-wrapper {
