@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 import { getEducationData, getProfile } from '../../../services/SupabaseService';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const TimelineWrapper = styled.div`
   max-width: 800px;
@@ -70,7 +71,8 @@ const About = () => {
     <>
       {loading && 
         <Box sx={{ alignContent: 'center', width: '100%', height: '100vh' }}>
-          <LinearProgress />
+          {/* <LinearProgress /> */}
+          <CircularProgress size="6rem" />
         </Box>
       }
       {!loading &&
