@@ -15,7 +15,7 @@ function ProjectMain(props){
                 </p>
                 <p className="description">{props.description}</p>
                 <div className="button-wrapper">
-                   <button className="b2"><a href={props.reference}>View code</a></button>
+                   <button className="b2"><a href={props.reference} target='_blank'>View code</a></button>
                 </div>
             </div>
         </section> 
