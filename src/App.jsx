@@ -21,7 +21,7 @@ function App() {
           <Route path='/Badges' Component={Badges}/>
 
           <Route
-            path="*"
+            path="/*"
             element={<Navigate to="/" replace />}
           />
         </Routes>
