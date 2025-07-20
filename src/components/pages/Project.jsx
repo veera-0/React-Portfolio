@@ -1,5 +1,5 @@
 import './../../App.css'
-import ProjectMain from './../main/ProjectMain'
+import ProjectMain from '../main/project/ProjectMain'
 import Headers from './../header/Headers'
 import Footer from './../footer/Footer'
 import { useEffect, useState } from 'react'
