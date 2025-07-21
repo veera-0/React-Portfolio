@@ -1,4 +1,4 @@
-/* Sidebar styles */
+/* Sidebar styles 
 .sidebar {
     position: fixed;
     top: 0;
@@ -32,7 +32,6 @@
   
   .sidebar a:hover {
     background-color: green;
-    /* 575757 */
   }
 
   .sidebar a.active {
@@ -40,7 +39,6 @@
     color: black;
   }
   
-  /* Menu button styles */
   .menu-button {
     display: none;
     background-color: #007bff;
@@ -81,13 +79,11 @@
     }
   }
     
-  /* Anchors styles */
   .anchors {
     display: flex;
     justify-content: space-around;
   }
   
-  /* Navigation styles */
   nav, nav div {
     display: flex;
     justify-content: space-between;
@@ -97,7 +93,7 @@
 
   nav {
     padding: 0 20px;
-    max-width: 1200px;
+    max-width: max-content;
     margin: 0 auto;
   }
 
@@ -121,6 +117,7 @@
     margin-left: 20px;
   }
 
+
   nav a {
     font-size: 1.4rem;
     text-decoration: none;
@@ -133,6 +130,227 @@
     color: #E20074;
   }
 
-  /* header{
-    background-color: #2D2D2D;
-  } */
+   nav a.active{
+    color: green; 
+  } 
+
+
+  nav{
+  padding:0 100px;
+  box-sizing: border-box;
+}
+
+.links{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.links a {
+  margin: 0 10px; 
+  text-decoration: none;
+  color: black; 
+} 
+
+
+nav img{
+  width:40px;
+  height:40px;
+  mix-blend-mode: multiply;
+  background-blend-mode: overlay;
+}
+
+nav div{
+  padding: 100px;
+}
+
+nav a{
+  font-size: 1.5rem;
+  text-decoration:none;
+  color:black;
+}
+
+@media (max-width: 768px) {
+  .links {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+  }
+
+  .menu-button {
+      display: block;
+      margin-right: 20px;
+  }
+
+  .links.show {
+      display: flex;
+      position: relative;
+      z-index: 10;
+      left: 0;
+      right: 1;
+      background-color: inherit;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #0077cc;
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: underline;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+nav a:hover {
+   transform: translateY(-2px); 
+  color: chocolate;
+  /* background-color: #50A3A4; 
+  border-radius: 5px;
+  /* padding: 8px 16px; */
+  /* transition: all 0.3s ease; */
+  /* box-shadow: 0 2px 4px rgba(0,0, 0, 0.1); 
+  width: initial;
+  /* height: 30px; 
+  opacity: 0.9;
+} */
+
+/* Global Link Styling */
+a {
+  text-decoration: none;
+  color: #0077cc;
+  transition: all 0.3s ease;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between; /* ensures logo left, menu button right */
+  align-items: center;
+  padding: 0 60px;
+  height: 75px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Logo */
+nav img {
+  width: 50px;
+  height: 50px;
+  mix-blend-mode: multiply;
+}
+
+/* Link Container */
+.links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Link Buttons */
+.links a {
+  font-size: 1.3rem;
+  color: black;
+  padding: 10px 14px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.links a:hover {
+  background-color: #f2f2f2;
+  color: #e20074;
+}
+
+.links a.active {
+  color: green;
+  font-weight: 600;
+  border-bottom: 2px solid green;
+}
+
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 240px;
+  background-color: #222;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.showSidebar {
+  transform: translateX(0);
+}
+
+.sidebar a {
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  color: white;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: green;
+}
+
+.sidebar a.active {
+  background-color: green;
+  color: black;
+}
+
+/* Hamburger Menu Button (Mobile) */
+.menu-button {
+  display: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    margin-left: auto;     /* push it to far right */
+  }
+
+  nav img {
+    margin-right: auto;    /* push logo to far left */
+  }
+}
+
