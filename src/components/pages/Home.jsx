@@ -2,6 +2,7 @@ import './../../App.css'
 import Headers from './../header/Headers'
 import Main from './../main/Main'
 import Footer from './../footer/Footer'
+import ParticlesBackground from '../background/ParticlesBackground'
 import { useEffect } from 'react'
 
 function Home(){
@@ -12,6 +13,7 @@ function Home(){
 
     return(
         <>
+            <ParticlesBackground />
             <Headers />
             <Main />
             <Footer />
