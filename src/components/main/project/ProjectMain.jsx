@@ -10,9 +10,9 @@ function ProjectMain(props){
             <div className="pro">
                 <img src={props.image} alt="image" loading='eager' />
                 <h5><span style={{color:'black'}}>Project Title</span>: {props.title}</h5>
-                <p className="tech">
+                <div className="tech">
                     <TechnologyChips technology={props.technology} />
-                </p>
+                </div>
                 <p className="description">{props.description}</p>
                 <div className="button-wrapper">
                    <button className="b2"><a href={props.reference} target='_blank'>View code</a></button>

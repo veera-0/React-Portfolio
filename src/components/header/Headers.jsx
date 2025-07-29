@@ -11,13 +11,7 @@ function Headers(){
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
-
-    /* Photo by <a href="https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> on <a href="https://unsplash.com/photos/turned-on-laptop-on-table-uPXs5Vx5bIg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-     
-    Photo by Kennst du schon die Umkreisel App?  : https://www.pexels.com/photo/blue-universe-956981/
-
-    Image by <a href="https://pixabay.com/users/thedigitalartist-202249/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3497260">Pete Linforth</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3497260">Pixabay</a>
-    */
+    
     return(
         <>
             <header>

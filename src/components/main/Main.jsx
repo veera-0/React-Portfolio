@@ -9,7 +9,6 @@ import resume from './../../assets/resume/Velpuri Anjaneyulu.pdf';
 import './../../App.css';
 import '../main/main.css';
 
-// Set the app element for accessibility
 Modal.setAppElement('#root');
 
 function Main() {
@@ -77,7 +76,7 @@ function Main() {
                         alt="Resume Preview" 
                         style={{
                             width: 'auto',
-                            height: 'calc(90vh - 100px)', // Subtract header height
+                            height: 'calc(90vh - 100px)',
                             objectFit: 'contain',
                             boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)'
                         }}

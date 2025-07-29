@@ -315,6 +315,7 @@ main p {
   }
 
   .description{
+    font-size: 1em; 
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
@@ -416,7 +417,6 @@ main p {
 .description {
   font-size: 1em; 
   padding: 10px;
-  margin: 10px 0; 
   box-sizing: border-box;
   text-align: center;
 }
