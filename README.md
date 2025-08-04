@@ -1,6 +1,6 @@
 # Veera Anjaneyulu's Portfolio
 
-A modern, responsive personal portfolio website built with **React** and **Vite**. This site showcases projects, skills, education, and provides access to a downloadable resume.
+A modern, responsive personal portfolio website built with **React**, **Vite**, and **Supabase**. This full-stack application showcases projects, skills, education history, and provides access to a downloadable resume, all backed by a Supabase database.
 
 ## Features
 
@@ -15,7 +15,7 @@ A modern, responsive personal portfolio website built with **React** and **Vite*
 
 ## Demo
 
-![Portfolio Screenshot](src/assets/images/bglogo.jpg) <!-- Replace with an actual screenshot if available -->
+![Portfolio Screenshot](src/assets/images/screenshot.png)
 
 ## Getting Started
 
@@ -28,8 +28,8 @@ A modern, responsive personal portfolio website built with **React** and **Vite*
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/veera-0/React-Portfolio.git
+   cd React-Portfolio
    ```
 
 2. **Install dependencies:**
@@ -105,16 +105,24 @@ npm run preview
 
 ## Dependencies
 
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [react-router-dom](https://reactrouter.com/)
-- [styled-components](https://styled-components.com/)
-- [react-icons](https://react-icons.github.io/react-icons/)
-- [react-modal](https://github.com/reactjs/react-modal)
-- [react-vertical-timeline-component](https://github.com/stephane-monnot/react-vertical-timeline)
-- [@react-pdf-viewer/core](https://react-pdf-viewer.dev/) (installed, not currently used)
-- [@react-pdf/renderer](https://react-pdf.org/) (installed, not currently used)
-- [react-pdf](https://github.com/wojtekmaj/react-pdf) (installed, not currently used)
+### Frontend
+- [React](https://react.dev/) - UI framework
+- [Vite](https://vitejs.dev/) - Build tool and dev server
+- [react-router-dom](https://reactrouter.com/) - Client-side routing
+- [react-icons](https://react-icons.github.io/react-icons/) - Icons library
+- [react-modal](https://github.com/reactjs/react-modal) - Modal dialogs
+- [react-vertical-timeline-component](https://github.com/stephane-monnot/react-vertical-timeline) - Timeline UI
+
+### Backend & Database
+- [Supabase](https://supabase.com/) - Backend as a Service
+  - Real-time database
+  - Authentication (if implemented)
+  - File storage for images
+
+### PDF Handling (Optional)
+- [@react-pdf-viewer/core](https://react-pdf-viewer.dev/)
+- [@react-pdf/renderer](https://react-pdf.org/)
+- [react-pdf](https://github.com/wojtekmaj/react-pdf)
 
 ## Linting
 
@@ -123,9 +131,31 @@ Run ESLint to check code quality:
 npm run lint
 ```
 
+## Environment Setup
+
+1. Create a `.env.local` file in the project root:
+   ```env
+   VITE_SUPABASE_URL=your-supabase-project-url
+   VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+   ```
+
+2. Set up your Supabase tables:
+   - `profileDB`: User profile information
+   - `projectData`: Project details
+   - `educationData`: Education history
+
 ## Deployment
 
-The project is ready for static hosting (e.g., Netlify, Vercel, GitHub Pages). The `vite.config.js` is set to include PDF assets.
+The project can be deployed to any static hosting service (e.g., Netlify, Vercel, GitHub Pages).
+
+### Environment Variables
+When deploying, make sure to set these environment variables in your hosting platform:
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY`
+
+### Build Configuration
+- The `vite.config.js` is configured to include PDF assets
+- Supabase environment variables are handled via Vite's env handling
 
 
 **Author:** Veera Venkata Anjaneyulu Velpuri
