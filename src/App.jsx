@@ -17,8 +17,13 @@ function App() {
           <Route path='/home' Component={Home}/>
           <Route path='/projects' Component={Project}/>
           <Route path='/skills' Component={SkillsPage}/>
-          <Route path='/About' Component={AboutPage}/>
-          <Route path='/Badges' Component={Badges}/>
+          <Route path='/about' Component={AboutPage}/>
+          <Route path='/badges' Component={Badges}/>
+
+          <Route
+            path="/*"
+            element={<Navigate to="/" replace />}
+          />
         </Routes>
       </BrowserRouter>
     </>

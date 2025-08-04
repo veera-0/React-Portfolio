@@ -1,52 +1,86 @@
 import './../../App.css'
-import ProjectMain from './../main/ProjectMain'
-import bends from './../../assets/images/bends.jpg'
+import ProjectMain from '../main/project/ProjectMain'
 import Headers from './../header/Headers'
 import Footer from './../footer/Footer'
-import { useEffect } from 'react'
-import shop from './../../assets/images/petstore.jpg'
-import seat from './../../assets/images/seat.jpg'
-import calculator from './../../assets/images/calc.png'
+import { useEffect, useState } from 'react'
+import { getProjects } from '../../services/SupabaseService'
+import Skeleton from '@mui/material/Skeleton';
 
-function Project(){
+function Project() {
+    const [projects, setProjects] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         document.title = 'Veera | Projects';
+
+        async function fetchProjects() {
+            try {
+                const data = await getProjects();
+                setProjects(data);
+            } catch (err) {
+                setError('Failed to load projects');
+            } finally {
+                // setTimeout(() => {  
+                    setLoading(false);
+                // }, 5000);
+            }
+        }
+
+        fetchProjects();
     }, []);
 
-    return(
+    return (
         <>
-        <Headers />
+            <Headers />
             <main>
-                <p className='underline'>Projects</p>
-                <hr/>
-                <div className="grid">
-                    <ProjectMain image={bends} 
-                        title="Capillus pin bends" 
-                        technology="IOT | Arduino" 
-                        description="This project is developed to reduce the accidents in hilly areas"
-                        reference="https://github.com/veera-0/Capillus-pin-bends"/>
+                <p className='underline' style={{color:'green'}}>Projects</p>
+                <hr />
+                {loading && (
+                    <div className="grid">
+                        {[...Array(6)].map((_, idx) => (
+                            <div
+                                key={idx}
+                                style={{
+                                    background: '#fff',
+                                    borderRadius: 8,
+                                    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+                                    padding: 16,
+                                    minWidth: 250,
+                                    maxWidth: 350,
+                                    width: '100%',
+                                    margin: '0 auto 40px auto',
+                                    display: 'flex',
+                                    flexDirection: 'column'
+                                    
+                                }}
+                            >
+                                    <Skeleton variant="rectangular" width="100%" height={140} style={{ borderRadius: 8 }} />
+                                    <Skeleton variant="text" width="80%" height={32} />
+                                    <Skeleton variant="text" width="60%" height={24} />
+                                    <Skeleton variant="text" width="90%" height={20} />
 
-                    <ProjectMain image={calculator} 
-                        title="Calculator app" 
-                        technology="ReactJs" 
-                        description="This application was built using ReactJs for basic calculation"
-                        reference="https://github.com/veera-0/CalculatorApp"/>
-
-                    <ProjectMain image={shop} 
-                        title="Pet Store" 
-                        technology="SQL | Springboot" 
-                        description="This application was built using springboot framework with sql database for CRUD operations"
-                        reference="https://github.com/veera-0/Springboot-application"/>
-
-                    <ProjectMain image={seat} 
-                        title="Seat Booking System" 
-                        technology="HTML | CSS | PHP | SQL |JS" 
-                        description="This is a web application used to book seating. PHP is used for storing & retrieving from SQL."
-                        reference="https://github.com/veera-0/Springboot-application"/>
-                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
+                {!loading && error && <div style={{ color: 'red' }}>{error}</div>}
+                {!loading && (
+                    <div className="grid">
+                        {projects.map((proj) => (
+                            <ProjectMain
+                                key={proj.project_id}
+                                image={proj.project_ImageUrl}
+                                title={proj.projecttitle}
+                                technology={proj.techused}
+                                description={proj.projectdescription}
+                                reference={proj.project_link}
+                            />
+                        ))}
+                    </div>
+                )}
             </main>
-        <Footer />
+            <Footer />
         </>
     )
 }

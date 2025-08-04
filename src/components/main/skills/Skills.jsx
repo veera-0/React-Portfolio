@@ -7,7 +7,7 @@ import { SiC, SiCplusplus } from 'react-icons/si'
 function Skills() {
     return (
         <div className="about-container">
-            <h2>Skills</h2>
+            <h2 style={{color:'green'}}>Skills</h2>
             <div className="skills-grid">
                 <div className="skill-card">
                     <FaHtml5 className="skill-icon" />

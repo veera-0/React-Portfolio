@@ -70,7 +70,7 @@ footer {
     display: grid;
     place-items: center;
     padding-bottom: 25px;
-    background-color: linear-gradient(15deg, #00416A, #E4E5E6);; /* Add a background color if needed */
+    /* background-color: linear-gradient(15deg, #00416A, #E4E5E6); */
     transition: transform 0.3s ease; /* Add transition for smooth movement */
 }
 
@@ -81,7 +81,7 @@ footer.move {
 body {
     background-size: cover;
     background-repeat: no-repeat;
-    background: linear-gradient(15deg, #00416A, #E4E5E6);
+    /* background: linear-gradient(15deg, #00416A, #E4E5E6); */
     display: flex;
     flex-direction: column;
   }
