@@ -9,7 +9,7 @@ function ProjectMain(props){
         <section className="sec">
             <div className="pro">
                 <img src={props.image} alt="image" loading='eager' />
-                <h5><span style={{color:'black'}}>Project Title</span>: {props.title}</h5>
+                <h5><span style={{color:'black'}}>Title:</span> {props.title}</h5>
                 <div className="tech">
                     <TechnologyChips technology={props.technology} />
                 </div>

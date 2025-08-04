@@ -287,7 +287,8 @@ main p {
 }
 
 .pro h5 {
-  color: #955251;
+  /* color: #955251; */
+  color: #FF5252;
   font-size: 1.3em;
   margin: 10px 0;
 }
@@ -400,11 +401,14 @@ main p {
   font-weight: bold;
   text-align: center;
   margin: 0;
-  padding: 5px 10px; 
-  border-radius: 5px; 
-  display: inline-block; 
-  width: 100%; 
-  box-sizing: border-box; 
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 8px;    
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 576px) {

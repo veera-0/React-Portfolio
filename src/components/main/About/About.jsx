@@ -80,7 +80,7 @@ const About = () => {
            <div className="about-me">
             <h2 style={{color:'green'}}>About Me</h2>
             <p>{profile.about}</p>
-          </div>
+           </div>
           <TimelineWrapper>
             <VerticalTimeline>
               {educationDetails.map((item, index) => (
