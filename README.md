@@ -61,9 +61,7 @@ npm run preview
 ```
 .
 ├── public/
-│   └── resume/
-│       ├── pdf.worker.js
-│       └── VelpuriAnjaneyulu.pdf
+│   
 ├── src/
 │   ├── assets/
 │   │   ├── images/
@@ -119,10 +117,6 @@ npm run preview
   - Authentication (if implemented)
   - File storage for images
 
-### PDF Handling (Optional)
-- [@react-pdf-viewer/core](https://react-pdf-viewer.dev/)
-- [@react-pdf/renderer](https://react-pdf.org/)
-- [react-pdf](https://github.com/wojtekmaj/react-pdf)
 
 ## Linting
 
