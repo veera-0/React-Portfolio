@@ -72,7 +72,7 @@ const About = () => {
       {loading && 
         <Box sx={{ alignContent: 'center', width: '100%', height: '100vh' }}>
           {/* <LinearProgress /> */}
-          <CircularProgress size="6rem" />
+          <CircularProgress size="4rem" />
         </Box>
       }
       {!loading &&
