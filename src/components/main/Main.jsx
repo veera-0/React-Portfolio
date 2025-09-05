@@ -58,7 +58,7 @@ function Main() {
                     </a>
                 </div>
             </div>
-            <img src={work} alt='image' loading='eager' fetchpriority="high" />
+            <img src={work} alt='image' loading='eager' fetchPriority="high" />
 
             <Modal
                 isOpen={modalIsOpen}

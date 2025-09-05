@@ -8,7 +8,7 @@ function ProjectMain(props){
     return(
         <section className="sec">
             <div className="pro">
-                <img src={props.image} alt="image" loading='eager' />
+                <img src={props.image} alt="image" loading='lazy' fetchPriority="high"/>
                 <h5><span style={{color:'black'}}>Title:</span> {props.title}</h5>
                 <div className="tech">
                     <TechnologyChips technology={props.technology} />
