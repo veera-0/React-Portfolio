@@ -3,8 +3,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import work from './../../assets/images/work.jpeg';
-import resumeImage from './../../assets/resume/resume_pic.png';
+import work from './../../assets/images/work-optimized.webp';
+import resumeImage from './../../assets/resume/resume_pic-optimized.webp';
 import resume from './../../assets/resume/Velpuri Anjaneyulu.pdf';
 import './../../App.css';
 import '../main/main.css';
@@ -58,7 +58,7 @@ function Main() {
                     </a>
                 </div>
             </div>
-            <img src={work} alt='image' loading='eager' />
+            <img src={work} alt='image' loading='eager' fetchpriority="high" />
 
             <Modal
                 isOpen={modalIsOpen}

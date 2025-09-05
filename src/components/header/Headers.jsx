@@ -1,6 +1,6 @@
 import './../../App.css'
 import '../header/headers.css'
-import logo from './../../assets/images/v-logo.jpeg'
+import logo from './../../assets/images/v-logo-optimized.webp';
 import { NavLink } from "react-router-dom";
 import { useState } from 'react';
 
