@@ -3,8 +3,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import work from './../../assets/images/work-optimized.webp';
-import resumeImage from './../../assets/resume/resume_pic-optimized.webp';
 import resume from './../../assets/resume/Velpuri Anjaneyulu.pdf';
 import './../../App.css';
 import '../main/main.css';
@@ -58,7 +56,7 @@ function Main() {
                     </a>
                 </div>
             </div>
-            <img src={work} alt='image' loading='eager' fetchPriority="high" />
+            <img src="https://veera-verse.netlify.app/images/work.webp" alt='image' loading='eager' fetchPriority="high" />
 
             <Modal
                 isOpen={modalIsOpen}
@@ -72,7 +70,7 @@ function Main() {
                 </div>
                 <div className="resume-preview">
                     <img 
-                        src={resumeImage} 
+                        src="https://veera-verse.netlify.app/images/resume_pic-optimized.webp" 
                         alt="Resume Preview" 
                         style={{
                             width: 'auto',

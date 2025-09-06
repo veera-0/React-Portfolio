@@ -1,6 +1,5 @@
 import './../../App.css'
 import '../header/headers.css'
-import logo from './../../assets/images/v-logo-optimized.webp';
 import { NavLink } from "react-router-dom";
 import { useState } from 'react';
 
@@ -16,7 +15,7 @@ function Headers(){
         <>
             <header>
                 <nav>
-                    <img src={logo} alt="v logo" loading='lazy'/>
+                    <img src="https://veera-verse.netlify.app/images/v-logo.webp" alt="v logo" loading='lazy'/>
                     <div>
                         <div className="links">
                             <NavLink to='/' activeclassname="active">Home</NavLink>
