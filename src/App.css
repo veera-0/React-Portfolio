@@ -251,8 +251,7 @@ main p {
   max-width: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  /* background-color: antiquewhite; */
+  justify-content: space-between;
   background-color: #E2E8F0;
   box-shadow: 5px 5px 5px 1px grey;
   padding: 10px;
@@ -264,8 +263,7 @@ main p {
 }
 
 .b2 {
-  /* background: linear-gradient(to right, violet, purple); */
-  background: #0F3460;
+  background: #A52A2A;
   border: none;
   color: rgb(250, 246, 246);
   padding: 15px 32px;
@@ -288,7 +286,7 @@ main p {
 
 .pro h5 {
   /* color: #FF5252; */
-  color: blueviolet;
+  color: #003C8A;
   font-size: 1.3em;
   margin: 10px 0;
 }

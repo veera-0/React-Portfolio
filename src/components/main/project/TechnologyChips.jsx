@@ -15,7 +15,7 @@ export default function TechnologyChips({ technology }) {
           }}
         >
       {techArray.map((tech, index) => (
-        <Chip style={{background: '#FF7043', color: 'white'}} key={index} label={tech} variant="outlined" />
+        <Chip style={{background: '#004647', color: 'white'}} key={index} label={tech} variant="outlined" />
       ))}
     </Stack>
   );
