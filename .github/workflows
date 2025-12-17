@@ -1,0 +1,25 @@
+name: Supabase keepalive
+
+on:
+  schedule:
+    - cron: '*/10 * * * *' # every 10 minutes
+  workflow_dispatch: {}
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase keepalive (profileDB)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          TABLE_NAME: profileDB
+        run: |
+          set -e
+          KEY="${SUPABASE_ANON_KEY:-$SUPABASE_SERVICE_ROLE_KEY}"
+          echo "Pinging ${SUPABASE_URL}/rest/v1/${TABLE_NAME}?select=id&limit=1"
+          curl -sSf -X GET "${SUPABASE_URL}/rest/v1/${TABLE_NAME}?select=id&limit=1" \
+            -H "apikey: ${KEY}" \
+            -H "Authorization: Bearer ${KEY}" \
+            -H "Accept: application/json" || true
