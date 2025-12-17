@@ -9,17 +9,19 @@ jobs:
   keepalive:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Supabase keepalive (profileDB)
+      - name: Ping Supabase profileDB table
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           TABLE_NAME: profileDB
         run: |
           set -e
-          KEY="${SUPABASE_ANON_KEY:-$SUPABASE_SERVICE_ROLE_KEY}"
+          if [ -z "${SUPABASE_ANON_KEY}" ]; then
+            echo "SUPABASE_ANON_KEY is not set. Add it to repository secrets as SUPABASE_ANON_KEY."
+            exit 1
+          fi
           echo "Pinging ${SUPABASE_URL}/rest/v1/${TABLE_NAME}?select=id&limit=1"
           curl -sSf -X GET "${SUPABASE_URL}/rest/v1/${TABLE_NAME}?select=id&limit=1" \
-            -H "apikey: ${KEY}" \
-            -H "Authorization: Bearer ${KEY}" \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}" \
             -H "Accept: application/json" || true
