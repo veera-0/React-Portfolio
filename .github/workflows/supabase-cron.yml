@@ -2,7 +2,7 @@ name: Supabase keepalive
 
 on:
   schedule:
-    - cron: '*/10 * * * *' # every 10 minutes
+    - cron: '0 */5 * * *' # every 5 hours
   workflow_dispatch: {}
 
 jobs:
