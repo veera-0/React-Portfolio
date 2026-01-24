@@ -38,12 +38,12 @@ function Main() {
             zIndex: 1000
         }
     };
-    
-    return(
+
+    return (
         <section id="hero">
             <div className='hero-content'>
                 <h1 className='animated-name'>
-                    Hi, I am <br/> 
+                    Hi, I am <br />
                     <span className='name-highlight'>Veera Anjaneyulu </span>
                 </h1>
                 <p className='hero-description'>
@@ -56,7 +56,6 @@ function Main() {
                     </a>
                 </div>
             </div>
-            <img src="https://veera-verse.netlify.app/images/work.webp" alt='image' loading='eager' fetchPriority="high" />
 
             <Modal
                 isOpen={modalIsOpen}
@@ -69,9 +68,9 @@ function Main() {
                     <button onClick={closeModal} className="close-button">&times;</button>
                 </div>
                 <div className="resume-preview">
-                    <img 
-                        src="https://veera-verse.netlify.app/images/resume_pic-optimized.webp" 
-                        alt="Resume Preview" 
+                    <img
+                        src="https://veera-verse.netlify.app/images/resume_pic-optimized.webp"
+                        alt="Resume Preview"
                         style={{
                             width: 'auto',
                             height: 'calc(90vh - 100px)',
@@ -81,7 +80,7 @@ function Main() {
                     />
                 </div>
             </Modal>
-        </section>  
+        </section>
     )
 }
 
