@@ -15,6 +15,9 @@ function Main() {
     const openModal = () => setModalIsOpen(true);
     const closeModal = () => setModalIsOpen(false);
 
+    // Detect mobile screen
+    const isMobile = window.innerWidth <= 768;
+
     const customStyles = {
         content: {
             top: '50%',
@@ -23,11 +26,12 @@ function Main() {
             bottom: 'auto',
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#fff',
-            padding: '20px',
-            maxWidth: '1000px', // Increased maxWidth
-            width: '95%',
-            height: '90vh', // Set specific height
-            overflow: 'hidden', // Changed to hidden
+            padding: isMobile ? '15px' : '20px',
+            maxWidth: isMobile ? '95vw' : '1000px',
+            width: isMobile ? '95vw' : '95%',
+            maxHeight: isMobile ? '85vh' : '90vh',
+            height: 'auto',
+            overflow: 'auto',
             borderRadius: '8px',
             boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
             display: 'flex',
@@ -72,8 +76,10 @@ function Main() {
                         src="https://veera-verse.netlify.app/images/resume_pic-optimized.webp"
                         alt="Resume Preview"
                         style={{
+                            maxWidth: '100%',
+                            maxHeight: isMobile ? 'calc(85vh - 80px)' : 'calc(90vh - 100px)',
                             width: 'auto',
-                            height: 'calc(90vh - 100px)',
+                            height: 'auto',
                             objectFit: 'contain',
                             boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)'
                         }}
