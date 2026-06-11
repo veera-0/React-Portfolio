@@ -33,7 +33,7 @@ const About = () => {
     const [error, setError] = useState(null);
   
       useEffect(() => {
-          document.title = 'Veera | Projects';
+          document.title = 'Veera | About';
   
           async function fetchEducationData() {
               try {
@@ -41,7 +41,7 @@ const About = () => {
                   setEducationDetails(data);
                   
               } catch (err) {
-                  setError('Failed to load projects');
+                  setError('Failed to load EducationData');
               } finally {
                   setTimeout(() => {
                     setLoading(false);  
@@ -75,6 +75,7 @@ const About = () => {
           <CircularProgress size="4rem" />
         </Box>
       }
+      {!loading && error && <div style={{ color: 'red' }}>{error}</div>}
       {!loading &&
          <>
            <div className="about-me">

@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import resume from './../../assets/resume/Velpuri Anjaneyulu.pdf';
+import resume from './../../assets/resume/Anjaneyulu_Velpuri_Resume.pdf';
 import './../../App.css';
 import '../main/main.css';
 
