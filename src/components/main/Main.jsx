@@ -70,7 +70,7 @@ function Main() {
                 </div>
                 <div className="resume-preview">
                     <img 
-                        src="https://veera-verse.netlify.app/images/Resume_Veera.webp" 
+                        src="https://veera-verse.netlify.app/resume/Resume_Veera.webp" 
                         alt="Resume Preview" 
                         style={{
                             width: 'auto',
