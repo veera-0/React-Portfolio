@@ -1,4 +1,4 @@
-# Veera Anjaneyulu's Portfolio
+# My Portfolio
 
 A modern, responsive personal portfolio website built with **React**, **Vite**, and **Supabase**. This full-stack application showcases projects, skills, education history, and provides access to a downloadable resume, all backed by a Supabase database.
 
