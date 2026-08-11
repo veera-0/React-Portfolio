@@ -72,12 +72,7 @@ function Main() {
                     <img 
                         src="https://veera-verse.netlify.app/images/Resume_Veera.webp" 
                         alt="Resume Preview" 
-                        style={{
-                            width: 'auto',
-                            height: 'calc(90vh - 100px)',
-                            objectFit: 'contain',
-                            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)'
-                        }}
+                        className="resume-image"
                     />
                 </div>
             </Modal>
