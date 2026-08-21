@@ -25,7 +25,9 @@ function ProjectMain(props){
                 </div>
                 <p className="description">{props.description}</p>
                 <div className="button-wrapper">
-                   <button className="b2"><a href={props.reference} target='_blank'>View code</a></button>
+                   <button className="b2" onClick={props.onClick}>
+                        <a href={props.reference} target='_blank' rel='noreferrer'>View code</a>
+                   </button>
                 </div>
             </div>
         </section> 

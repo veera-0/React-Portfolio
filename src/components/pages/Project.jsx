@@ -3,7 +3,7 @@ import ProjectMain from '../main/project/ProjectMain'
 import Headers from './../header/Headers'
 import Footer from './../footer/Footer'
 import { useEffect, useState } from 'react'
-import { getProjects } from '../../services/SupabaseService'
+import { getProjects, recordButtonClick } from '../../services/SupabaseService'
 import Skeleton from '@mui/material/Skeleton';
 
 function Project() {
@@ -75,6 +75,7 @@ function Project() {
                                 technology={proj.techused}
                                 description={proj.projectdescription}
                                 reference={proj.project_link}
+                                onClick={() => recordButtonClick(`project_${proj.projecttitle.replace(/\s+/g, '_').toLowerCase()}`)}
                             />
                         ))}
                     </div>

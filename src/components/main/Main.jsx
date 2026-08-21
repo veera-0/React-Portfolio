@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import resume from './../../assets/resume/Anjaneyulu_Velpuri_Resume.pdf';
+import { recordButtonClick } from '../../services/SupabaseService';
 import './../../App.css';
 import '../main/main.css';
 
@@ -14,6 +15,15 @@ function Main() {
 
     const openModal = () => setModalIsOpen(true);
     const closeModal = () => setModalIsOpen(false);
+
+    const handlePreviewClick = () => {
+        recordButtonClick('resume_preview').catch(() => {});
+        openModal();
+    }
+
+    const handleDownloadClick = () => {
+        recordButtonClick('resume_download').catch(() => {});
+    }
 
     const customStyles = {
         content: {
@@ -50,8 +60,8 @@ function Main() {
                     I'm a software developer, enthusiastic in learning new skills, expanding my knowledge and leverage my learnings.
                 </p>
                 <div className="resume-buttons">
-                    <button className="button" onClick={openModal}>Preview Resume</button>
-                    <a href={resume} download="Velpuri Anjaneyulu Resume">
+                    <button className="button" onClick={handlePreviewClick}>Preview Resume</button>
+                    <a href={resume} download="Velpuri Anjaneyulu Resume" onClick={handleDownloadClick}>
                         <button className="button">Download Resume</button>
                     </a>
                 </div>

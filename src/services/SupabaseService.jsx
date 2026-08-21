@@ -36,4 +36,36 @@ export async function getEducationData() {
   return data;
 }
 
+export async function recordButtonClick(buttonId){
+  const { error } = await supabase.rpc('increment_button_click', {
+    p_button_id: buttonId
+  });
+  if (error) console.error(`Failed to record ${buttonId} click:`, error);
+}
+
+export async function recordProjectClick(projectId) {
+  const { data, error: selectError } = await supabase
+    .from('projectData')
+    .select('project_click_count')
+    .eq('project_id', projectId)
+    .single();
+
+  if (selectError && selectError.code !== 'PGRST116') {
+    console.error('Failed to fetch project click count:', selectError);
+    return;
+  }
+
+  const currentCount = data?.project_click_count ?? 0;
+  const nextCount = currentCount + 1;
+
+  const { error } = await supabase
+    .from('projectData')
+    .update({ project_click_count: nextCount })
+    .eq('project_id', projectId);
+
+  if (error) {
+    console.error(`Failed to record click for project ${projectId}:`, error);
+  }
+}
+
 export default supabase;
