@@ -12,7 +12,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   /* background: linear-gradient(15deg, #00416A, #E4E5E6); */
-  background: #e7d3bb;   
+  background: #F1F5F9;
   /* background: #F8F9FA; */
   /* background: #F5F7FA; */
   display: flex;
@@ -406,4 +406,3 @@ main p {
 }
 
      
-

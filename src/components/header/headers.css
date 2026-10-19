@@ -271,6 +271,7 @@ nav img {
   font-size: 1.3rem;
   color: black;
   padding: 10px 14px;
+  text-decoration: none;
   transition: color 0.3s ease, background-color 0.3s ease;
   border-radius: 6px;
 }
@@ -278,6 +279,13 @@ nav img {
 .links a:hover {
   background-color: #f2f2f2;
   color: #e20074;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.links a:focus {
+  text-decoration: none;
+  box-shadow: none;
 }
 
 .links a.active {
@@ -310,11 +318,19 @@ nav img {
   padding: 15px 25px;
   font-size: 1.1rem;
   color: white;
+  text-decoration: none;
   transition: background 0.3s;
 }
 
 .sidebar a:hover {
   background-color: green;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.sidebar a:focus {
+  text-decoration: none;
+  box-shadow: none;
 }
 
 .sidebar a.active {
@@ -353,4 +369,3 @@ nav img {
     margin-right: auto;    /* push logo to far left */
   }
 }
-

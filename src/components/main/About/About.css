@@ -50,9 +50,11 @@
   
   .about-me p{
     font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 1000px;
+    line-height: 1.7;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
     margin: 0 auto;
-    text-align: justify;
+    text-align: left;
     padding: 0 20px;
   }
